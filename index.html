@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Victoria & Believe | #Vibe4ever26</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500&display=swap');
+:root{--olive:#68704a;--cream:#f7f0e3;--purple:#684b6d;--plum:#352537;--ink:#2d272b;--gold:#c8b48d;--white:#fffdf8}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:Montserrat,sans-serif;font-weight:300}a{color:inherit}
+#music{position:fixed;right:18px;bottom:18px;z-index:50;border:1px solid #fff8;background:var(--purple);color:#fff;width:50px;height:50px;border-radius:50%;font-size:19px;box-shadow:0 10px 30px #0003}
+nav{position:fixed;top:0;left:0;right:0;z-index:40;padding:20px 28px;display:flex;justify-content:space-between;color:#fff;mix-blend-mode:difference}
+nav a{text-decoration:none;font-size:9px;letter-spacing:.2em;text-transform:uppercase;margin-left:18px}
+.hero{height:100svh;min-height:680px;display:grid;place-items:center;position:relative;overflow:hidden;background:linear-gradient(120deg,#4c5836,#6d4e72);color:#fff;text-align:center}
+.hero:before{content:"";position:absolute;width:90vw;height:90vw;border-radius:50%;top:-55vw;left:-20vw;background:#f0e5cf22;box-shadow:700px 700px 0 100px #fff0}
+.hero:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at center,#ffffff0c,#241b2caa)}
+.hero-inner{position:relative;z-index:2;padding:25px;animation:in 1.3s ease both}@keyframes in{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
+.eyebrow,.label{font-size:9px;letter-spacing:.35em;text-transform:uppercase}.names{font:400 clamp(65px,14vw,175px)/.76 "Cormorant Garamond",serif;letter-spacing:-.045em;margin:30px 0}.names em{color:#e9ddc5}.hero-date{font-size:11px;letter-spacing:.28em}.hash{font-size:10px;letter-spacing:.3em;margin-top:16px}.scroll{position:absolute;bottom:24px;z-index:3;font-size:8px;letter-spacing:.3em;text-transform:uppercase}
+.section{padding:115px 8vw}.center{text-align:center}.intro{max-width:780px;margin:auto}.label{color:var(--olive)}h2{font:400 clamp(48px,7vw,88px)/.9 "Cormorant Garamond",serif;color:var(--purple);margin:17px 0 28px}.lead{font:400 21px/1.75 "Cormorant Garamond",serif}
+.opening{background:var(--white);text-align:center}.opening .quote{font:italic 28px/1.5 "Cormorant Garamond",serif;max-width:720px;margin:auto;color:var(--purple)}
+.story{display:grid;grid-template-columns:1fr 1fr;min-height:680px}.story-photo{background:linear-gradient(145deg,#7b875d,#dfd2bb 45%,#6b4c70);position:relative}.story-photo span{position:absolute;bottom:25px;left:25px;color:#fff;font-size:9px;letter-spacing:.2em;background:#201b2488;padding:10px}.story-copy{background:var(--white);padding:9vw;display:flex;align-items:center}.story-copy p{font:400 20px/1.9 "Cormorant Garamond",serif}
+.count{background:var(--plum);color:#fff;text-align:center}.count h2{color:#fff}.count .label{color:#d8c89f}.counter{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}.unit{min-width:115px;padding:17px 22px;border-top:1px solid #fff5}.unit b{display:block;font:400 53px "Cormorant Garamond",serif}.unit small{font-size:8px;letter-spacing:.24em;text-transform:uppercase}
+.events{background:var(--white)}.eventgrid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#d9cdbb}.event{background:var(--white);padding:60px 30px;text-align:center}.event .number{font:400 45px "Cormorant Garamond",serif;color:var(--gold)}.event h3{font:400 34px "Cormorant Garamond",serif;color:var(--purple)}.event p{font-size:12px;line-height:1.9}
+.timeline{max-width:750px;margin:auto}.line{display:grid;grid-template-columns:130px 1fr;border-bottom:1px solid #6b4c7028;padding:24px 0}.line strong{color:var(--purple);font-weight:400}.line span{font-family:"Cormorant Garamond",serif;font-size:21px}
+.palette{display:flex;justify-content:center;margin:35px auto}.sw{width:145px;height:145px;display:grid;place-items:center;font-size:9px;letter-spacing:.12em;text-transform:uppercase}.olive{background:var(--olive);color:#fff}.cream{background:#eee5d4}.purp{background:var(--purple);color:#fff}
+.gallery{display:grid;grid-template-columns:1.3fr .7fr .7fr;grid-auto-rows:290px;gap:8px}.photo{position:relative;overflow:hidden;background:linear-gradient(135deg,#697652,#e2d5bf,#684b6d)}.photo:nth-child(2){background:linear-gradient(135deg,#c9baa3,#755879)}.photo:nth-child(3){background:linear-gradient(135deg,#eee5d4,#637047)}.photo:nth-child(4){background:linear-gradient(135deg,#684b6d,#bda991)}.photo:nth-child(5){background:linear-gradient(135deg,#65724a,#eee5d4)}.photo:nth-child(6){background:linear-gradient(135deg,#806185,#53603e)}.photo span{position:absolute;bottom:16px;left:16px;color:#fff;background:#201a258c;padding:8px 10px;font-size:8px;letter-spacing:.16em}
+.info{background:var(--white)}.info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.box{border:1px solid #d8cbb9;padding:35px;text-align:center}.box h3{font:400 30px "Cormorant Garamond",serif;color:var(--purple)}.box p{font-size:11px;line-height:1.9}
+.rsvp{background:var(--olive);color:#fff;text-align:center}.rsvp h2{color:#fff}.rsvp input,.rsvp textarea{display:block;width:min(540px,92%);margin:8px auto;padding:14px;border:0;background:#fffdf8;font:inherit}.rsvp textarea{min-height:110px}.rsvp button{padding:14px 30px;background:var(--cream);border:0;color:var(--purple);letter-spacing:.18em;text-transform:uppercase}
+.final{background:var(--plum);color:#fff;text-align:center;min-height:70vh;display:grid;place-items:center}.final h2{color:#fff;font-size:clamp(60px,10vw,125px);margin:0}.final .hash{color:#d9c99f}
+footer{background:#211a22;color:#fff;text-align:center;padding:50px 20px;font:400 26px "Cormorant Garamond",serif}
+@media(max-width:700px){nav div:last-child{display:none}.story{grid-template-columns:1fr}.story-photo{min-height:55vh}.eventgrid,.info-grid{grid-template-columns:1fr}.gallery{grid-template-columns:1fr 1fr;grid-auto-rows:210px}.photo:first-child{grid-column:span 2}.sw{width:100px;height:100px}.section{padding:85px 7vw}.line{grid-template-columns:95px 1fr}}
+
+#entrance{position:fixed;inset:0;z-index:100;background:linear-gradient(135deg,#4f5b37,#684b6d);color:#fff;display:grid;place-items:center;text-align:center;transition:opacity .8s ease,visibility .8s ease}
+#entrance.hide{opacity:0;visibility:hidden;pointer-events:none}
+.enter-box{padding:35px 28px;max-width:520px}
+.enter-kicker{font-size:9px;letter-spacing:.38em;text-transform:uppercase;color:#ded0aa}
+.enter-names{font:400 clamp(58px,14vw,105px)/.8 "Cormorant Garamond",serif;margin:30px 0}
+.enter-names em{color:#e8dcc5}
+.enter-date{font-size:10px;letter-spacing:.25em;margin-bottom:30px}
+.enter-btn{border:1px solid #fff9;background:#f7f0e3;color:#684b6d;padding:16px 32px;font:500 10px Montserrat,sans-serif;letter-spacing:.22em;text-transform:uppercase;cursor:pointer}
+.enter-note{font-size:9px;opacity:.72;margin-top:18px}
+</style>
+</head>
+<body>
+<div id="entrance">
+  <div class="enter-box">
+    <div class="enter-kicker">You are invited to</div>
+    <div class="enter-names">Victoria <em>&</em><br>Believe</div>
+    <div class="enter-date">19 · 12 · 2026 · #VIBE4EVER26</div>
+    <button class="enter-btn" id="enterBtn">Enter Wedding</button>
+    <div class="enter-note">Tap to enter & turn on the music</div>
+  </div>
+</div>
+
+<nav><div>V & B</div><div><a href="#story">Story</a><a href="#details">Details</a><a href="#gallery">Gallery</a><a href="#rsvp">RSVP</a></div></nav>
+<audio id="audio" loop preload="auto"><source src="soft_music.wav" type="audio/wav"></audio><button id="music">♫</button>
+
+<header class="hero">
+<div class="hero-inner"><div class="eyebrow">The beginning of our forever</div><div class="names">Victoria <em>&</em><br>Believe</div><div class="hero-date">19 · 12 · 2026</div><div class="hash">#VIBE4EVER26</div></div><div class="scroll">Scroll ↓</div>
+</header>
+
+<section class="section opening"><div class="intro"><div class="label">Welcome</div><h2>We’re getting married.</h2><p class="quote">“Two people, one promise, and a lifetime of choosing each other.”</p><p class="lead">With grateful hearts and our families beside us, we invite you to share in the joy of our wedding day.</p></div></section>
+
+<section class="story" id="story"><div class="story-photo"><span>IMAGINARY COUPLE PORTRAIT</span></div><div class="story-copy"><div><div class="label">Our Story</div><h2>How we got here.</h2><p>Our story is a journey of faith, friendship, laughter, growth and love. What started as a connection became a relationship we chose to nurture, and eventually a promise we knew we wanted to make for life.</p><p>Through every chapter, we have learned that love is not only a feeling — it is a choice, a commitment and a beautiful decision to build together.</p><p>Now, with God at the centre, we are stepping into marriage with grateful hearts.</p><p><em>We believed. And here we are.</em></p></div></div></section>
+
+<section class="section count"><div class="label">19 December 2026</div><h2>Counting down to #Vibe4ever26</h2><div class="counter"><div class="unit"><b id="days">0</b><small>Days</small></div><div class="unit"><b id="hours">0</b><small>Hours</small></div><div class="unit"><b id="minutes">0</b><small>Minutes</small></div><div class="unit"><b id="seconds">0</b><small>Seconds</small></div></div></section>
+
+<section class="section events" id="details"><div class="center"><div class="label">The Wedding</div><h2>Join us for our day.</h2></div><div class="eventgrid"><div class="event"><div class="number">01</div><h3>Church Wedding</h3><p><strong>Christ Victory Life Church Intl.</strong><br>Plot 628, Dagba Area 1<br>Abuja, Nigeria</p></div><div class="event"><div class="number">02</div><h3>Reception</h3><p>Immediately following the ceremony<br><br><strong>Same venue</strong><br>Come ready to celebrate, eat, dance and make memories.</p></div></div></section>
+
+<section class="section"><div class="center"><div class="label">The Day</div><h2>A little look at the celebration.</h2></div><div class="timeline"><div class="line"><strong>Church</strong><span>Wedding ceremony & vows</span></div><div class="line"><strong>After</strong><span>Reception begins at the same location</span></div><div class="line"><strong>Celebrate</strong><span>Food, music, dancing, pictures & joy</span></div><div class="line"><strong>Forever</strong><span>A new chapter as husband & wife</span></div></div></section>
+
+<section class="section center"><div class="label">Our Colours</div><h2>Olive green · Cream · Purple</h2><div class="palette"><div class="sw olive">Olive Green</div><div class="sw cream">Cream</div><div class="sw purp">Purple</div></div></section>
+
+<section class="section" id="gallery"><div class="center"><div class="label">Memories</div><h2>Our Gallery</h2><p class="lead">Imaginary photographs for now — your real pictures can replace these beautiful placeholders.</p></div><div class="gallery"><div class="photo"><span>VICTORIA & BELIEVE</span></div><div class="photo"><span>ENGAGEMENT</span></div><div class="photo"><span>PRE-WEDDING</span></div><div class="photo"><span>THE BRIDE</span></div><div class="photo"><span>THE GROOM</span></div><div class="photo"><span>FOREVER</span></div></div></section>
+
+<section class="section info"><div class="center"><div class="label">For our guests</div><h2>Everything you need to know.</h2></div><div class="info-grid"><div class="box"><h3>Dress Code</h3><p>Wedding colour inspiration: olive green, cream and purple. Final guest dress guidance can be added here.</p></div><div class="box"><h3>Venue</h3><p>Christ Victory Life Church Intl.<br>Plot 628, Dagba Area 1.</p></div><div class="box"><h3>Gifts</h3><p>Gift information or a wishlist can be added here when ready.</p></div></div></section>
+
+<section class="section rsvp" id="rsvp"><div class="label" style="color:#dfd0a8">RSVP</div><h2>Will you celebrate with us?</h2><p>We would love to know you are coming.</p><input placeholder="Your name"><input placeholder="Number of guests" type="number" min="1"><textarea placeholder="A message for Victoria & Believe"></textarea><button onclick="alert('Thank you! RSVP demo received.')">Send RSVP</button></section>
+
+<section class="final"><div><div class="label" style="color:#d9c99f">The beginning of forever</div><h2>Victoria &<br>Believe</h2><div class="hash">#VIBE4EVER26</div></div></section>
+<footer>With God at the centre, forever begins here.</footer>
+
+<script>
+const target=new Date("2026-12-19T00:00:00+01:00");
+function countdown(){let x=Math.max(0,target-new Date());document.getElementById("days").textContent=Math.floor(x/86400000);document.getElementById("hours").textContent=Math.floor(x/3600000)%24;document.getElementById("minutes").textContent=Math.floor(x/60000)%60;document.getElementById("seconds").textContent=Math.floor(x/1000)%60}
+countdown();setInterval(countdown,1000);
+const audio=document.getElementById("audio"),music=document.getElementById("music"),entrance=document.getElementById("entrance"),enterBtn=document.getElementById("enterBtn");
+enterBtn.addEventListener("click",async()=>{
+  try{
+    await audio.play();
+    music.textContent="❚❚";
+  }catch(e){
+    music.textContent="♫";
+  }
+  entrance.classList.add("hide");
+});
+music.onclick=async e=>{
+  e.stopPropagation();
+  if(audio.paused){try{await audio.play();music.textContent="❚❚"}catch(e){}}
+  else{audio.pause();music.textContent="♫"}
+};
+</script>
+</body></html>
